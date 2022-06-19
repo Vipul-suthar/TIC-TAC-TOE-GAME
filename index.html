@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE GAME</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <!-- 
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+
+
+</head>
+
+<body>
+    <audio src="BGM2.mp3"></audio>
+    <div class="starting_page ">
+
+        <!-- <h1>wellcome to </h1> -->
+        <h1>tic tac toe game</h1>
+        <h6></h6>
+        <div class="select_XO">
+            <p>select which you want to be?</p>
+            <div class="btns">
+                <button class="choose" id="playX">player (X)</button>
+                <button class="choose" id="playO">player (O)</button>
+            </div>
+        </div>
+    </div>
+    <div class="main_container inactive">
+        <div class="setting">
+            <div class="music_set">
+                <h3>MUSIC</h3>
+                <input type="checkbox" id="music_check" onclick="music_play_pause()">
+            </div>
+            <div class="sound_set">
+                <h3>SOUND</h3>
+                <input type="checkbox" id="sound_check" onclick="sound_play_pause()">
+            </div>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check" id="bars"><i class="fas fa-bars" onclick="show_hide()" ></i>
+</label>
+
+        <div class="players">
+            <span class="player1  active">X's Turn</span>
+            <span class="player2">O's Turn</span>
+        </div>
+        <div class="cell_container">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="line " id="line"></div>
+        </div>
+        <button class="reset">RESET</button>
+    </div>
+    <div class="result inactive">
+        <h1>GAME OVER</h1>
+        <h2></h2>
+        <button class="playAgain">PLAY AGAIN</button>
+    </div>
+</body>
+<script src="logic.js"></script>
+
+</html>
